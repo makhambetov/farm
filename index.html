@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Farm</title>
+</head>
+<body>
+	<style>
+		body{
+			font-family: Arial;
+		}
+		select{
+			width: 200px;
+			height: 170px;
+			margin: 0 7px 7px;
+			text-align: right;
+		}
+		table{
+			border: grey solid 1px;
+		}
+		.container{
+			width: 440px;
+			margin:0 auto;
+		}
+		td p{
+			margin: 0;
+			margin: 0 7px ;
+		}
+		#update_btn{
+			margin: 5px 0;
+		}
+		#kill{
+			float: right;
+			margin: 5px 0;
+		}
+
+	</style>
+	<div class="container">
+		<p>Фермочка для овечек</p>
+		
+		<table>
+			<tr>
+				<td>
+					<p>Загон 1</p>
+					<select size="10" id="pen1" multiple=""></select>
+				</td>
+				<td>
+					<p>Загон 2</p>
+					<select size="10" id="pen2" multiple=""></select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Загон 3</p>
+					<select size="10" id="pen3" multiple=""></select>
+				</td>
+				<td>
+					<p>Загон 4</p>
+					<select size="10" id="pen4" multiple=""></select>
+				</td>
+			</tr>
+
+		</table>
+		<td colspan="2">
+			<input type="submit" id="update_btn" onclick="updatePage();" value="Обновить">
+			<input type="submit" id="kill" onclick="kill();" value="Зарубить овечек">
+		</td>
+		<br>
+		<input type="text" id="command_line" size="45" placeholder="Команды [убить Овечка5] [переместить овечка3 загон2]"> 
+		<input type="submit" id="do" value="Выполнить" onclick="command();">
+		<input type="text" id="killed" value="" size="45" disabled="" style="margin-top: 5px">
+		
+	</div>
+	<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
